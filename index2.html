@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/cc/Western_Sushi.jpg'); background-size: 100%" lang="en">
+<link rel="stylesheet" type="text/css" href="styleSheet.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Tracker</title>
+</head>
+<body>
+<div id="header">
+    <h1>Food Tracker</h1>
+</div>
+
+<div id="nav">
+    <button style="height: 25px; width: 100px;"><a href="index.html">Home</a></button>
+    <button style="height: 25px; width: 100px;">Food Tracker</button>
+</div>
+
+<div id="content">
+    <form style="font-size: larger">
+        Name: <input id="name" />
+        Description: <input id="desc"/>
+        Date: <input id="date"/>
+        Shelf Life: <input id="life"/>
+        Expiration Date: <input id="exp"/>
+        <input type ='button' value="Submit" onclick="update()"/>
+    </form>
+
+    <table id="table" border="1" style="width:100%">
+        <tr>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Date</td>
+            <td>Shelf Life</td>
+            <td>Expiration Date</td>
+        </tr>
+    </table>
+    <script type=text/javascript src="scripts.js"></script>
+</div>
+
+<div id="footer">
+    Copyright &copy; Zachary Kurtz
+</div>
+</body>
+</html>
