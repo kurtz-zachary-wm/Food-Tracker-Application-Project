@@ -1,4 +1,4 @@
-/*Get Input Elements From DOM*/
+//GET INPUT ELEMENTS FROM DOM//
 var nameInput = document.getElementById("name");
 var descInput = document.getElementById("desc");
 var dateInput = document.getElementById("date");
@@ -8,13 +8,13 @@ var expInput = document.getElementById("exp");
     /*Get Table From DOM*/
         var tableOutput = document.getElementById("table");
 
-    /*Main Update Function, Calls When Submit Button Is Clicked*/
+    //MAIN UPDATE FUNCTION, CALLS WHEN SUBMIT BUTTON IS CLICKED//
         function update() {
                 var newItem = getInputItem();
                 updateTable(newItem);
             }
 
-/*Get New Item From Input Form*/
+//GET NEW ITEM FROM INPUT FORM//
     function getInputItem() {
             var item = {
                     name: nameInput.value,
@@ -26,12 +26,12 @@ var expInput = document.getElementById("exp");
     return item;
 }
 
-    /*Update Table With New Item*/
+    //UPDATE TABLE WITH NEW ITEM//
         function updateTable(item) {
-               /*If Item Is Empty, Dont Update Table*/
+               //IF ITEM IS EMPTY, DONT UPDATE TABLE//
                    if(item.name == "" || item.desc == "" || item.date == "" || item.life == "" || item.exp == "") return;
 
-                    /*Create New TR And TD For Table Output*/
+                    ///CREATE NEW TR AND TD FOR TABLE OUTPUT//
                         var tablerow = document.createElement("tr");
                var name = document.createElement("td");
                 var desc = document.createElement("td");
@@ -39,17 +39,17 @@ var expInput = document.getElementById("exp");
                 var life = document.createElement("td");
                 var exp = document.createElement("td");
 
-                    /*Update New TD Elements With Item Info*/
+                    //UPDATE NEW TD ELEMENTS WITH ITEM INFO//
                         name.innerHTML = item.name;
                 desc.innerHTML = item.desc;
                 date.innerHTML = item.date;
                 life.innerHTML = item.life;
                 exp.innerHTML = item.exp;
 
-                    /*If Shelf Life Is Less Than 3 Days, Set Background To Red*/
+                    //IF SHELF LIFE IS LESS THAN 3 DAYS, SET BACKGROUND TO RED//
                        if(parseFloat(item.life) < 3) tablerow.style.backgroundColor = "red";
 
-                    /*Append New Elements To Table*/
+                    //APPEND NEW ELEMENTS TO TABLE//
                        tablerow.appendChild(name);
                 tablerow.appendChild(desc);
                 tablerow.appendChild(date);
